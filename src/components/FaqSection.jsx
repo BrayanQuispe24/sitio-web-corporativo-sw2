@@ -41,8 +41,7 @@ export default function FaqSection({ onOpenDemo }) {
         {/* Encabezado */}
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Respuestas claras a tus{' '}
-            <span className="text-neon-400">dudas principales.</span>
+            Respuestas claras a tus dudas principales.
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-300">

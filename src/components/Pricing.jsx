@@ -98,7 +98,7 @@ export default function Pricing({ onOpenDemo }) {
         {/* Encabezado */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Inversión clara diseñada para maximizar tu <span className="text-neon-400">margen neto</span>
+            Inversión clara diseñada para maximizar tu margen neto.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-400">
             Sin costes ocultos por usuario adicional. Elige el nivel de capacidad que tu centro deportivo necesita hoy y escala sin fricciones.

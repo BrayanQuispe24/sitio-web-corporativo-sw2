@@ -34,8 +34,7 @@ export default function AwardAndTestimonial({ onOpenDemo }) {
             {/* Texto y Métricas del Galardón */}
             <div className="lg:col-span-7">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Reconocidos por la excelencia e innovación en{' '}
-                <span className="text-neon-400">ingeniería de software y SaaS.</span>
+                Reconocidos por la excelencia e innovación en ingeniería de software y SaaS.
               </h3>
 
               <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">

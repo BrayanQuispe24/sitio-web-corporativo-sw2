@@ -10,7 +10,7 @@ export default function CtaBanner({ onOpenDemo }) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
           ¿Listo para dar el siguiente paso?{' '}
-          <span className="text-neon-400 block mt-2">
+          <span className="text-white block mt-2">
             Automatizamos y digitalizamos tus operaciones con IA.
           </span>
         </h2>

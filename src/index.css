@@ -121,3 +121,18 @@
   animation: pulse-slow 3s infinite ease-in-out;
 }
 
+/* Neon utility fallbacks para garantizar soporte inmediato en HMR y dev server */
+.text-neon-300 { color: #86efac; }
+.text-neon-400 { color: #4ade80; }
+.text-neon-500 { color: #22c55e; }
+.text-neon-600 { color: #16a34a; }
+
+.bg-neon-300 { background-color: #86efac; }
+.bg-neon-400 { background-color: #4ade80; }
+.bg-neon-500 { background-color: #22c55e; }
+.bg-neon-600 { background-color: #16a34a; }
+
+.border-neon-400 { border-color: #4ade80; }
+.border-neon-500 { border-color: #22c55e; }
+
+

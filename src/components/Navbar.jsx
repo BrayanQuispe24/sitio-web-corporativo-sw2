@@ -32,23 +32,17 @@ export default function Navbar({ activeSection, onOpenDemo }) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-6">
           
-          {/* Logo Minimalista de Alto Impacto (Fiel a la referencia) */}
-          <a href="#inicio" className="flex items-center gap-2.5 flex-shrink-0 group">
-            <div className="w-8 h-8 rounded-lg bg-neon-500 flex items-center justify-center shadow-lg shadow-neon-500/20 group-hover:scale-105 transition-transform">
-              <span className="text-slate-950 font-black text-sm tracking-tighter">R</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-lg sm:text-xl font-black tracking-tight text-white group-hover:text-neon-300 transition-colors uppercase">
-                Random<span className="text-neon-400">Soft</span>
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-neon-400 animate-pulse"></span>
-            </div>
+          {/* Logo Minimalista Tipográfico Puro (Fiel a la imagen de referencia) */}
+          <a href="#inicio" className="flex items-center gap-2 flex-shrink-0 group">
+            <span className="text-lg sm:text-xl font-extrabold tracking-wider text-white uppercase group-hover:text-slate-200 transition-colors">
+              RANDOMSOFT
+            </span>
           </a>
 
-          {/* Menú Desktop Limpio y en una sola línea (Sin desbordes ni texto partido) */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          {/* Menú Desktop Limpio y Monocromático (Sin mezclas de colores) */}
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
             {navItems.map((item) => {
               const sectionKey = item.href.replace('#', '');
               const isActive = activeSection === sectionKey;
@@ -56,29 +50,17 @@ export default function Navbar({ activeSection, onOpenDemo }) {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`px-3.5 py-1.5 text-xs font-semibold tracking-wide whitespace-nowrap rounded-lg transition-all duration-200 flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 text-xs tracking-wide whitespace-nowrap transition-colors ${
                     isActive 
-                      ? 'text-neon-400 bg-neon-500/10' 
-                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      ? 'text-white font-bold' 
+                      : 'text-slate-400 hover:text-white font-medium'
                   }`}
                 >
-                  {isActive && <span className="w-1 h-1 rounded-full bg-neon-400" />}
                   <span>{item.name}</span>
                 </a>
               );
             })}
           </nav>
-
-          {/* Botón CTA Neón (Fiel al botón de la referencia) */}
-          <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
-            <button
-              onClick={onOpenDemo}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-neon-500 hover:bg-neon-400 text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-neon-500/25 hover:shadow-neon-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
-            >
-              <span>Solicitar Demo</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-950" />
-            </button>
-          </div>
 
           {/* Botón Móvil */}
           <div className="flex lg:hidden items-center">

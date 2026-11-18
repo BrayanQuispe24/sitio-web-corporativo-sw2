@@ -38,8 +38,7 @@ export default function TeamSection({ onOpenDemo }) {
         {/* Encabezado */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Un equipo apasionado por{' '}
-            <span className="text-neon-400">construir software de excelencia.</span>
+            Un equipo apasionado por construir software de excelencia.
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">

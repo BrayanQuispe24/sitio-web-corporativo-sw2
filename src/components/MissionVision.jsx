@@ -48,7 +48,7 @@ export default function MissionVision() {
         {/* Encabezado */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Nuestra <span className="text-neon-400">Misión, Visión</span> y Valores
+            Nuestra Misión, Visión y Valores
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">

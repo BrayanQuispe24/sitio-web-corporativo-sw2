@@ -23,8 +23,7 @@ export default function BentoGrid({ onOpenDemo }) {
         {/* Encabezado */}
         <div className="max-w-3xl mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Tecnología e innovación que{' '}
-            <span className="text-neon-400">impulsa resultados.</span>
+            Tecnología e innovación que impulsa resultados.
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">

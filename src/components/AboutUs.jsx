@@ -52,8 +52,7 @@ export default function AboutUs({ onOpenDemo }) {
           {/* Columna Izquierda: Identidad y Quiénes Somos */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
-              Líderes en automatización e{' '}
-              <span className="text-neon-400 block sm:inline">ingeniería de software</span>
+              Líderes en automatización e ingeniería de software.
             </h2>
 
             <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed">

@@ -78,7 +78,7 @@ export default function ContactForm() {
         {/* Cabecera */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Agenda una sesión técnica con el equipo de <span className="text-neon-400">RandomSoft</span>
+            Agenda una sesión técnica con el equipo de RandomSoft.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
             ¿Listo para implementar FitGo! en tu gimnasio o necesitas una arquitectura a medida? Nuestros ingenieros y especialistas de producto te responderán en menos de 2 horas.

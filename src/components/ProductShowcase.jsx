@@ -83,7 +83,7 @@ export default function ProductShowcase() {
         {/* Cabecera de la sección */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            La plataforma integral para gimnasios de <span className="text-neon-400">nueva generación</span>
+            La plataforma integral para gimnasios de nueva generación.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
             Diseñado por los ingenieros de <strong className="text-white">RandomSoft</strong> para resolver la fragmentación del software tradicional. FitGo! combina hardware IoT, algoritmos científicos y visión computacional en un sistema modular único.

@@ -54,8 +54,7 @@ export default function CaseReels({ onOpenDemo }) {
           
           <div className="lg:col-span-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Ponemos la tecnología en el{' '}
-              <span className="text-neon-400">mundo físico y real.</span>
+              Ponemos la tecnología en el mundo físico y real.
             </h2>
 
             <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed">
@@ -122,8 +121,7 @@ export default function CaseReels({ onOpenDemo }) {
         <div>
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Resultados comprobados que{' '}
-              <span className="text-neon-400">hablan por sí mismos.</span>
+              Resultados comprobados que hablan por sí mismos.
             </h3>
 
             <p className="mt-4 text-base text-slate-400">

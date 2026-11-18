@@ -61,10 +61,9 @@ export default function Hero({ onOpenDemo }) {
           {/* Columna Izquierda: Copy, CTA y Métricas */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
 
-            {/* Titular Principal */}
+            {/* Titular Principal Minimalista en Blanco Sólido (Fiel a la imagen elegida) */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold tracking-tight text-white leading-[1.07]">
-              Automatizamos y digitalizamos tu empresa{' '}
-              <span className="text-neon-400 block sm:inline">con inteligencia artificial.</span>
+              Automatizamos y digitalizamos tu empresa con inteligencia artificial.
             </h1>
 
             {/* Subtítulo enfocado en RandomSoft y FitGo! */}
@@ -94,13 +93,13 @@ export default function Hero({ onOpenDemo }) {
             {/* Garantías rápidas */}
             <div className="mt-6 flex flex-wrap items-center gap-5 text-xs text-slate-400 font-medium">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Despliegue en 24h
+                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400" /> Despliegue en 24h
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Sin contratos forzosos
+                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400" /> Sin contratos forzosos
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Hardware IoT & Cloud AWS
+                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400" /> Hardware IoT & Cloud AWS
               </span>
             </div>
 
@@ -127,7 +126,7 @@ export default function Hero({ onOpenDemo }) {
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-dark-950/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-neon-400 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-white/70" />
                     <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
                       RandomSoft Keynote 2026
                     </span>
@@ -136,8 +135,8 @@ export default function Hero({ onOpenDemo }) {
                     "Arquitecturas de IA y Software en Producción Real"
                   </p>
                 </div>
-                <div className="w-9 h-9 rounded-xl bg-neon-500/20 border border-neon-500/30 flex items-center justify-center text-neon-400">
-                  <Sparkles className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white">
+                  <Sparkles className="w-4 h-4 text-slate-300" />
                 </div>
               </div>
 
@@ -147,12 +146,12 @@ export default function Hero({ onOpenDemo }) {
 
         </div>
 
-        {/* Fila de Métricas Clave (Idéntica a la barra de estadísticas bajo el hero en la referencia) */}
+        {/* Fila de Métricas Clave (Números en Blanco Sólido, sin sobrecarga de colores) */}
         <div className="mt-14 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="flex flex-col">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-mono tracking-tight">
-                <span className="text-neon-400">{stat.value}</span>
+                {stat.value}
               </div>
               <div className="text-sm sm:text-base font-bold text-slate-200 mt-1">
                 {stat.label}
@@ -164,11 +163,10 @@ export default function Hero({ onOpenDemo }) {
           ))}
         </div>
 
-        {/* Barra de Logos / Aliados Tecnológicos (Monocromáticos sutiles como en la referencia) */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-6 opacity-75 hover:opacity-100 transition-opacity">
+        {/* Barra de Logos / Aliados Tecnológicos (Monocromáticos elegantes) */}
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-6 opacity-60 hover:opacity-100 transition-opacity">
           {techPartners.map((tech, i) => (
-            <div key={i} className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-colors">
-              <span className="w-1.5 h-1.5 rounded-full bg-neon-400/80" />
+            <div key={i} className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-400 hover:text-white transition-colors">
               <span>{tech.name}</span>
             </div>
           ))}
