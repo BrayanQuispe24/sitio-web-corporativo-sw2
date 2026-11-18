@@ -1,146 +1,177 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Play, 
-  ShieldCheck, 
-  Zap, 
-  Activity, 
-  QrCode, 
-  BrainCircuit, 
-  CheckCircle2, 
+import {
+  ArrowRight,
+  Sparkles,
+  TrendingUp,
+  Zap,
+  ShieldCheck,
   Server,
-  Users
+  CheckCircle2,
+  ChevronRight,
+  Play
 } from 'lucide-react';
 
 export default function Hero({ onOpenDemo }) {
+  const stats = [
+    {
+      value: '+85%',
+      label: 'Eficiencia Operativa',
+      subtext: 'Automatización de flujos repetitivos'
+    },
+    {
+      value: '3x',
+      label: 'Velocidad de Respuesta',
+      subtext: 'Procesamiento en tiempo real'
+    },
+    {
+      value: '24/7',
+      label: 'Operaciones Autónomas',
+      subtext: 'Accesos y cobros sin pausas'
+    },
+    {
+      value: '+99.9%',
+      label: 'Disponibilidad Cloud',
+      subtext: 'Infraestructura redundante AWS'
+    }
+  ];
+
+  const techPartners = [
+    { name: 'Amazon Web Services', tag: 'AWS Cloud' },
+    { name: 'OpenAI', tag: 'LLM Models' },
+    { name: 'Google MediaPipe', tag: 'Computer Vision' },
+    { name: 'React 18', tag: 'Frontend PWA' },
+    { name: 'PostgreSQL', tag: 'Database' },
+    { name: 'Docker', tag: 'Microservices' },
+  ];
+
   return (
-    <section 
-      id="inicio" 
-      className="relative min-h-screen flex flex-col justify-center pt-20 pb-6 md:pt-24 md:pb-8 overflow-hidden bg-subtle-grid"
+    <section
+      id="inicio"
+      className="relative min-h-[92vh] flex flex-col justify-center pt-24 pb-12 md:pt-28 md:pb-16 overflow-hidden bg-[#05070b]"
     >
-      {/* Luces y efectos de fondo */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      {/* Resplandores ambientales verdes neón (Fiel a la referencia) */}
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[350px] bg-neon-500/12 blur-[160px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-10 w-[500px] h-[450px] bg-neon-500/15 blur-[170px] rounded-full pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center my-auto">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          
-          {/* Titular Llamativo Compacto y de Alto Impacto */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-[1.14]">
-            Transformamos la industria del fitness con{' '}
-            <span className="gradient-text block sm:inline">software de alto rendimiento</span>
-          </h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow flex flex-col justify-center">
 
-          {/* Subtítulo enfocado en RandomSoft y FitGo! */}
-          <p className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-300 font-normal leading-relaxed max-w-3xl">
-            En <strong className="text-white font-semibold">RandomSoft</strong> diseñamos soluciones digitales inteligentes, seguras y escalables para operadores deportivos de alto volumen. Nuestro software insignia <strong className="text-cyan-300 font-semibold">FitGo!</strong> fusiona visión computacional, modelos deterministas y control de accesos IoT en una plataforma unificada.
-          </p>
+        {/* LAYOUT SPLIT DE 2 COLUMNAS (Exacto a la imagen de referencia) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 
-          {/* Botones CTA */}
-          <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
-            <a
-              href="#fitgo"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all text-sm sm:text-base"
-            >
-              <span>Explorar FitGo!</span>
-              <ArrowRight className="w-4 h-4 text-cyan-200" />
-            </a>
+          {/* Columna Izquierda: Copy, CTA y Métricas */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
 
-            <button
-              onClick={onOpenDemo}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700/80 font-semibold transition-all text-sm sm:text-base backdrop-blur-md hover:border-cyan-500/40"
-            >
-              <Play className="w-3.5 h-3.5 text-cyan-400 fill-cyan-400" />
-              <span>Ver Demo Interactiva</span>
-            </button>
+            {/* Titular Principal */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold tracking-tight text-white leading-[1.07]">
+              Automatizamos y digitalizamos tu empresa{' '}
+              <span className="text-neon-400 block sm:inline">con inteligencia artificial.</span>
+            </h1>
+
+            {/* Subtítulo enfocado en RandomSoft y FitGo! */}
+            <p className="mt-6 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
+              Automatizamos procesos clave, reducimos costos operativos y multiplicamos el impacto de tus equipos mediante sistemas inteligentes adaptados a tu negocio. Creadores del ecosistema líder <strong className="text-white font-semibold">FitGo! (DUBSS-GYM)</strong>.
+            </p>
+
+            {/* Botones de Acción */}
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+              <button
+                onClick={onOpenDemo}
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl neon-btn text-base font-bold transition-all shadow-xl shadow-neon-500/25"
+              >
+                <span>Solicitar Demo</span>
+                <ArrowRight className="w-4 h-4 text-slate-950" />
+              </button>
+
+              <a
+                href="#casos"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700/80 font-semibold transition-all text-sm sm:text-base backdrop-blur-md hover:border-neon-500/40"
+              >
+                <span>Ver casos de éxito</span>
+                <ChevronRight className="w-4 h-4 text-slate-400" />
+              </a>
+            </div>
+
+            {/* Garantías rápidas */}
+            <div className="mt-6 flex flex-wrap items-center gap-5 text-xs text-slate-400 font-medium">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Despliegue en 24h
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Sin contratos forzosos
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-neon-400" /> Hardware IoT & Cloud AWS
+              </span>
+            </div>
+
           </div>
 
-          {/* Garantías rápidas */}
-          <div className="mt-3.5 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] sm:text-xs text-slate-400 font-medium">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Despliegue en 24h
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Sin contratos forzosos
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Compatible con torniquetes y molinetes
-            </span>
+          {/* Columna Derecha: Fotografía Real del Keynote Speaker (Exacto a la imagen de referencia) */}
+          <div className="lg:col-span-5 relative flex items-center justify-center">
+
+            {/* Halo de luz neón detrás de la foto */}
+            <div className="absolute inset-0 bg-neon-500/20 blur-[90px] rounded-3xl -z-10" />
+
+            <div className="relative w-full max-w-[480px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+              <img
+                src="/images/hero-speaker.jpg"
+                alt="Conferencia Keynote de Inteligencia Artificial y Software"
+                className="w-full h-[480px] sm:h-[540px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+
+              {/* Degradado inferior y lateral para fundir con el fondo negro (efecto editorial) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#05070b] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#05070b]/60 via-transparent to-transparent" />
+
+              {/* Tag flotante estilo conferencia en la esquina */}
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-dark-950/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-neon-400 animate-pulse" />
+                    <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                      RandomSoft Keynote 2026
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-0.5">
+                    "Arquitecturas de IA y Software en Producción Real"
+                  </p>
+                </div>
+                <div className="w-9 h-9 rounded-xl bg-neon-500/20 border border-neon-500/30 flex items-center justify-center text-neon-400">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
-        {/* Tarjetas de Métricas Destacadas dentro del primer viewport */}
-        <div className="mt-6 sm:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4.5">
-          
-          <div className="glass-panel rounded-xl p-3.5 sm:p-4 border border-slate-800 relative overflow-hidden group hover:border-cyan-500/40 transition-all">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Infraestructura AWS</span>
-              <Server className="w-4 h-4 text-cyan-400" />
+        {/* Fila de Métricas Clave (Idéntica a la barra de estadísticas bajo el hero en la referencia) */}
+        <div className="mt-14 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="flex flex-col">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-mono tracking-tight">
+                <span className="text-neon-400">{stat.value}</span>
+              </div>
+              <div className="text-sm sm:text-base font-bold text-slate-200 mt-1">
+                {stat.label}
+              </div>
+              <div className="text-xs text-slate-400 mt-0.5">
+                {stat.subtext}
+              </div>
             </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              +99.9%
-            </div>
-            <p className="mt-1 text-[11px] text-slate-400 leading-snug">
-              Disponibilidad continua y redundancia multi-zona.
-            </p>
-            <div className="mt-2.5 flex items-center gap-1.5 text-[10px] text-emerald-400 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              SLA Empresarial Certificado
-            </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="glass-panel rounded-xl p-3.5 sm:p-4 border border-slate-800 relative overflow-hidden group hover:border-cyan-500/40 transition-all">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Control de Accesos</span>
-              <QrCode className="w-4 h-4 text-emerald-400" />
+        {/* Barra de Logos / Aliados Tecnológicos (Monocromáticos sutiles como en la referencia) */}
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-6 opacity-75 hover:opacity-100 transition-opacity">
+          {techPartners.map((tech, i) => (
+            <div key={i} className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-colors">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-400/80" />
+              <span>{tech.name}</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              +10k
-            </div>
-            <p className="mt-1 text-[11px] text-slate-400 leading-snug">
-              Accesos seguros procesados con código QR dinámico.
-            </p>
-            <div className="mt-2.5 flex items-center gap-1.5 text-[10px] text-cyan-300 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              Cero fraude por credencial prestada
-            </div>
-          </div>
-
-          <div className="glass-panel rounded-xl p-3.5 sm:p-4 border border-slate-800 relative overflow-hidden group hover:border-cyan-500/40 transition-all">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Motor Fisiológico</span>
-              <Zap className="w-4 h-4 text-amber-400" />
-            </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              ACSM & NSCA
-            </div>
-            <p className="mt-1 text-[11px] text-slate-400 leading-snug">
-              Algoritmos deterministas validados para prescripción física.
-            </p>
-            <div className="mt-2.5 flex items-center gap-1.5 text-[10px] text-amber-300 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              Sobrecarga progresiva científica
-            </div>
-          </div>
-
-          <div className="glass-panel rounded-xl p-3.5 sm:p-4 border border-slate-800 relative overflow-hidden group hover:border-cyan-500/40 transition-all">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">IA en el Borde</span>
-              <BrainCircuit className="w-4 h-4 text-purple-400" />
-            </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              MediaPipe
-            </div>
-            <p className="mt-1 text-[11px] text-slate-400 leading-snug">
-              Visión computacional para análisis postural a 60 FPS.
-            </p>
-            <div className="mt-2.5 flex items-center gap-1.5 text-[10px] text-purple-300 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
-              33 puntos articulares en tiempo real
-            </div>
-          </div>
-
+          ))}
         </div>
 
       </div>

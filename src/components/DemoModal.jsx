@@ -67,16 +67,16 @@ export default function DemoModal({ isOpen, onClose }) {
 
         {submitted ? (
           <div className="py-8 text-center space-y-4">
-            <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
+            <div className="w-16 h-16 bg-neon-500/20 text-neon-400 rounded-full flex items-center justify-center mx-auto border border-neon-500/40">
               <MailCheck className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold text-white">
               ¡Accesos y Demo Enviados!
             </h3>
             <p className="text-sm text-slate-300 max-w-sm mx-auto">
-              Hemos enviado la <strong>URL del sistema</strong> y las <strong>credenciales de prueba</strong> de <strong className="text-cyan-400">FitGo!</strong> al correo:
+              Hemos enviado la <strong>URL del sistema</strong> y las <strong>credenciales de prueba</strong> de <strong className="text-neon-400">FitGo!</strong> al correo:
             </p>
-            <div className="inline-block px-4 py-2 rounded-lg bg-slate-950 border border-slate-800 text-cyan-300 font-mono text-sm">
+            <div className="inline-block px-4 py-2 rounded-lg bg-slate-950 border border-slate-800 text-neon-400 font-mono text-sm">
               {formData.email}
             </div>
             <p className="text-xs text-slate-400">
@@ -85,7 +85,7 @@ export default function DemoModal({ isOpen, onClose }) {
             <div className="pt-4">
               <button
                 onClick={handleClose}
-                className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 font-bold text-sm hover:opacity-90 transition-opacity"
+                className="px-6 py-2.5 rounded-lg bg-neon-500 hover:bg-neon-400 text-slate-950 font-bold text-sm transition-all"
               >
                 Entendido, iré a revisar mi correo
               </button>
@@ -93,7 +93,7 @@ export default function DemoModal({ isOpen, onClose }) {
           </div>
         ) : (
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 uppercase mb-2">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-neon-400 uppercase mb-2">
               <Sparkles className="w-4 h-4" />
               Acceso Inmediato a FitGo! Sandbox
             </div>
@@ -194,7 +194,7 @@ export default function DemoModal({ isOpen, onClose }) {
                     Modalidad
                   </label>
                   <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300">
-                    <Video className="w-4 h-4 text-cyan-400" />
+                    <Video className="w-4 h-4 text-neon-400" />
                     <span>Videollamada Google Meet</span>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export default function DemoModal({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-3 py-3.5 px-4 rounded-lg font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-cyan-300 to-emerald-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full mt-3 py-3.5 px-4 rounded-xl font-bold text-slate-950 bg-neon-500 hover:bg-neon-400 hover:shadow-lg hover:shadow-neon-500/25 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>

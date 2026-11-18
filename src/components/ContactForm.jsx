@@ -69,20 +69,16 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-dark-900 border-t border-slate-800/80 relative">
+    <section id="contacto" className="py-28 bg-[#05070b] border-t border-white/5 relative">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-10 w-80 h-80 bg-cyan-600/10 blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/2 left-10 w-80 h-80 bg-neon-500/10 blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabecera */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Mail className="w-3.5 h-3.5" />
-            Canal de Ventas e Ingeniería
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Agenda una sesión técnica con el equipo de <span className="gradient-text">RandomSoft</span>
+            Agenda una sesión técnica con el equipo de <span className="text-neon-400">RandomSoft</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
             ¿Listo para implementar FitGo! en tu gimnasio o necesitas una arquitectura a medida? Nuestros ingenieros y especialistas de producto te responderán en menos de 2 horas.
@@ -95,7 +91,7 @@ export default function ContactForm() {
           <div className="lg:col-span-5 bg-dark-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-8">
             
             <div>
-              <span className="text-xs uppercase font-mono font-bold text-cyan-400 tracking-wider">
+              <span className="text-xs uppercase font-mono font-bold text-neon-400 tracking-wider">
                 RandomSoft Software Factory
               </span>
               <h3 className="text-2xl font-bold text-white mt-1">
@@ -110,12 +106,12 @@ export default function ContactForm() {
             <div className="space-y-4">
               
               <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 flex-shrink-0">
+                <div className="p-2.5 rounded-lg bg-neon-500/10 text-neon-400 flex-shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-slate-400">Consultas Comerciales & Demos</div>
-                  <a href="mailto:ventas@randomsoft.io" className="text-sm font-bold text-white hover:text-cyan-300 transition-colors">
+                  <a href="mailto:ventas@randomsoft.io" className="text-sm font-bold text-white hover:text-neon-400 transition-colors">
                     ventas@randomsoft.io
                   </a>
                   <p className="text-[11px] text-slate-500 mt-0.5">Atención B2B y cotizaciones personalizadas</p>
@@ -123,12 +119,12 @@ export default function ContactForm() {
               </div>
 
               <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 flex-shrink-0">
+                <div className="p-2.5 rounded-lg bg-neon-500/10 text-neon-400 flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-slate-400">Soporte Técnico y SLA</div>
-                  <a href="mailto:soporte@randomsoft.io" className="text-sm font-bold text-white hover:text-emerald-300 transition-colors">
+                  <a href="mailto:soporte@randomsoft.io" className="text-sm font-bold text-white hover:text-neon-400 transition-colors">
                     soporte@randomsoft.io
                   </a>
                   <p className="text-[11px] text-slate-500 mt-0.5">Monitoreo 24/7 para clientes Enterprise</p>
@@ -136,7 +132,7 @@ export default function ContactForm() {
               </div>
 
               <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <div className="p-2.5 rounded-lg bg-purple-500/10 text-purple-400 flex-shrink-0">
+                <div className="p-2.5 rounded-lg bg-neon-500/10 text-neon-400 flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -151,7 +147,7 @@ export default function ContactForm() {
             </div>
 
             {/* SLA Badge */}
-            <div className="p-4 rounded-xl bg-slate-900/90 border border-cyan-500/30 flex items-center gap-3">
+            <div className="p-4 rounded-xl bg-slate-900/90 border border-neon-500/30 flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></div>
               <span className="text-xs text-slate-300">
                 <strong className="text-white">Compromiso RandomSoft:</strong> Respuesta garantizada por un ingeniero especialista en menos de 120 minutos.
@@ -168,7 +164,7 @@ export default function ContactForm() {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-colors text-xs font-semibold"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-neon-400 border border-slate-800 transition-colors text-xs font-semibold"
                   aria-label="LinkedIn RandomSoft"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -178,7 +174,7 @@ export default function ContactForm() {
                   href="https://github.com" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-colors text-xs font-semibold"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-neon-400 border border-slate-800 transition-colors text-xs font-semibold"
                   aria-label="GitHub RandomSoft"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
@@ -188,7 +184,7 @@ export default function ContactForm() {
                   href="https://twitter.com" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-colors text-xs font-semibold"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-neon-400 border border-slate-800 transition-colors text-xs font-semibold"
                   aria-label="X RandomSoft"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -204,14 +200,14 @@ export default function ContactForm() {
             
             {isSubmitted ? (
               <div className="py-12 px-4 text-center space-y-4 animate-in fade-in duration-300">
-                <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
+                <div className="w-16 h-16 bg-neon-500/20 text-neon-400 rounded-full flex items-center justify-center mx-auto border border-neon-500/40">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold text-white">
                   ¡Solicitud Recibida con Éxito!
                 </h3>
                 <p className="text-sm text-slate-300 max-w-md mx-auto">
-                  Gracias por contactar a <strong>RandomSoft</strong>. Uno de nuestros consultores técnicos de <strong>FitGo!</strong> revisará tus requerimientos y te contactará a <span className="text-cyan-400 font-mono">{formData.email}</span> en breve.
+                  Gracias por contactar a <strong>RandomSoft</strong>. Uno de nuestros consultores técnicos de <strong>FitGo!</strong> revisará tus requerimientos y te contactará a <span className="text-neon-400 font-mono">{formData.email}</span> en breve.
                 </p>
                 <div className="pt-4">
                   <button
@@ -371,7 +367,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 px-6 rounded-lg font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-cyan-300 to-emerald-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all flex items-center justify-center gap-2 text-base disabled:opacity-70 cursor-pointer"
+                  className="w-full py-4 px-6 rounded-xl font-bold text-slate-950 bg-neon-500 hover:bg-neon-400 hover:shadow-lg hover:shadow-neon-500/25 transition-all flex items-center justify-center gap-2 text-base disabled:opacity-70 cursor-pointer"
                 >
                   {loading ? (
                     <div className="flex items-center gap-2">

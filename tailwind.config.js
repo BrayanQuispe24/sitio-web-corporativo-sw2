@@ -22,6 +22,14 @@ export default {
           accent: '#10b981', // emerald
           crimson: '#f43f5e',
         },
+        neon: {
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          lime: '#a3e635',
+          bright: '#00ff66',
+        },
         dark: {
           950: '#06090e',
           900: '#0b0f17',
@@ -41,6 +49,8 @@ export default {
       boxShadow: {
         'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.3)',
         'glow-emerald': '0 0 35px -5px rgba(16, 185, 129, 0.3)',
+        'glow-neon': '0 0 35px -5px rgba(34, 197, 94, 0.4)',
+        'glow-neon-lg': '0 0 60px -5px rgba(0, 255, 102, 0.45)',
       }
     },
   },

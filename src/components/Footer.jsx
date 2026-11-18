@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ShieldCheck, Heart, ArrowUp } from 'lucide-react';
+import { Cpu, ShieldCheck, Heart, ArrowUp, Sparkles, Terminal } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -7,7 +7,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-dark-950 border-t border-slate-800 text-slate-400 text-sm">
+    <footer className="bg-[#05080c] border-t border-slate-800 text-slate-400 text-sm relative overflow-hidden">
+      {/* Sutil resplandor de fondo */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-neon-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -15,91 +18,92 @@ export default function Footer() {
           {/* Columna Marca RandomSoft & FitGo */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 p-0.5 flex items-center justify-center">
-                <div className="w-full h-full bg-dark-950 rounded-[7px] flex items-center justify-center">
-                  <Cpu className="w-4 h-4 text-cyan-400" />
+              <div className="w-9 h-9 rounded-xl bg-neon-500 p-0.5 flex items-center justify-center shadow-lg shadow-neon-500/20">
+                <div className="w-full h-full bg-dark-950 rounded-[9px] flex items-center justify-center">
+                  <Cpu className="w-4 h-4 text-neon-400" />
                 </div>
               </div>
               <span className="text-xl font-extrabold text-white">
-                Random<span className="text-cyan-400">Soft</span>
+                Random<span className="text-neon-400">Soft</span>
               </span>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              RandomSoft es una empresa de software factory e ingeniería aplicada especializada en arquitecturas Cloud de alta disponibilidad, inteligencia artificial en el borde y productos SaaS B2B para centros de fitness y wellness de alta concurrencia.
+              Factoría de software e ingeniería aplicada especializada en inteligencia artificial en el borde, arquitecturas Cloud de alta disponibilidad y plataformas SaaS para empresas y centros de fitness de alto rendimiento.
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-emerald-400 pt-1">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="font-mono">FitGo! Engine v2.4 • Sistemas 99.98% Operativos</span>
+            <div className="flex items-center gap-2 text-xs text-neon-400 pt-1 font-mono">
+              <span className="w-2 h-2 rounded-full bg-neon-400 animate-pulse"></span>
+              <span>RandomSoft AI Engine • Sistemas 99.98% Operativos</span>
             </div>
           </div>
 
-          {/* Columna Navegación Rápida */}
+          {/* Columna Identidad Institucional */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-              Navegación
+              Compañía
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#inicio" className="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="#quienes-somos" className="hover:text-neon-400 transition-colors">Quiénes Somos</a>
               </li>
               <li>
-                <a href="#fitgo" className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                <a href="#mision-vision" className="hover:text-neon-400 transition-colors">Misión & Visión</a>
+              </li>
+              <li>
+                <a href="#soluciones" className="hover:text-neon-400 transition-colors">Soluciones Inteligentes</a>
+              </li>
+              <li>
+                <a href="#tecnologia" className="hover:text-neon-400 transition-colors">Tecnología & Bento</a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-neon-400 transition-colors">Preguntas Frecuentes</a>
+              </li>
+              <li>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Contacto & Cotizaciones</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna Soluciones & FitGo */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
+              Plataformas & IA
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <a href="#fitgo" className="hover:text-neon-400 transition-colors flex items-center gap-1.5">
                   FitGo! (DUBSS-GYM)
-                  <span className="text-[10px] bg-cyan-500/20 text-cyan-300 px-1 rounded">IA</span>
+                  <span className="text-[10px] bg-neon-500/20 text-neon-300 px-1 rounded font-bold">CORE</span>
                 </a>
               </li>
-              <li>
-                <a href="#caracteristicas" className="hover:text-cyan-400 transition-colors">Características</a>
-              </li>
-              <li>
-                <a href="#simulador" className="hover:text-cyan-400 transition-colors">Simulador ROI</a>
-              </li>
-              <li>
-                <a href="#precios" className="hover:text-cyan-400 transition-colors">Planes y Precios</a>
-              </li>
-              <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Contacto & Demo</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Columna Módulos Técnicos */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-              Arquitectura FitGo!
-            </h4>
-            <ul className="space-y-2 text-xs">
               <li className="text-slate-300">Control QR Dinámico & IoT</li>
-              <li className="text-slate-300">MediaPipe Pose Estimator</li>
+              <li className="text-slate-300">MediaPipe Pose Estimator (60 FPS)</li>
               <li className="text-slate-300">Motor Experto ACSM / NSCA</li>
-              <li className="text-slate-300">Telegram Bot Webhooks</li>
-              <li className="text-slate-300">React PWA Offline-First</li>
-              <li className="text-slate-300">Cifrado AES-256 en AWS</li>
+              <li className="text-slate-300">Asistentes Autónomos 24/7</li>
             </ul>
           </div>
 
-          {/* Columna Legal & Corporativo */}
+          {/* Columna Legal & Cumplimiento */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-              Legal & Cumplimiento
+              Seguridad & Legal
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Políticas de Privacidad</a>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Políticas de Privacidad</a>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Términos del Servicio SaaS</a>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Términos del Servicio SaaS</a>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Seguridad y Protección de Datos</a>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Cifrado de Datos AES-256</a>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Acuerdo de Nivel de Servicio (SLA)</a>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Acuerdo de Nivel de Servicio (SLA)</a>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-cyan-400 transition-colors">Reporte de Vulnerabilidad</a>
+                <a href="#contacto" className="hover:text-neon-400 transition-colors">Reporte de Vulnerabilidad</a>
               </li>
             </ul>
           </div>
@@ -109,16 +113,16 @@ export default function Footer() {
         {/* Barra inferior */}
         <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            Copyright © 2026 RandomSoft Inc. - Creadores de FitGo! (DUBSS-GYM). Todos los derechos reservados.
+            Copyright © 2026 RandomSoft Inc. - Ingeniería de Software & Creadores de FitGo! (DUBSS-GYM). Todos los derechos reservados.
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1">
-              Desarrollado con precisión para gimnasios de alto rendimiento
+            <span className="flex items-center gap-1 text-slate-400">
+              Desarrollado con precisión e inteligencia artificial
             </span>
             <button
               onClick={scrollToTop}
-              className="p-2 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-neon-400 border border-slate-800 transition-colors"
               aria-label="Volver arriba"
             >
               <ArrowUp className="w-4 h-4" />
@@ -130,4 +134,3 @@ export default function Footer() {
     </footer>
   );
 }
-

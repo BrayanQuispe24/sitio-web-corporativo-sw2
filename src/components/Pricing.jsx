@@ -89,20 +89,16 @@ export default function Pricing({ onOpenDemo }) {
   ];
 
   return (
-    <section id="precios" className="py-24 bg-dark-950 relative overflow-hidden">
+    <section id="precios" className="py-28 bg-[#070a0f] relative overflow-hidden border-t border-white/5">
       {/* Background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-600/10 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-neon-500/10 blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Zap className="w-3.5 h-3.5" />
-            Planes Transparentes y Escalables
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Inversión clara diseñada para maximizar tu <span className="gradient-text">margen neto</span>
+            Inversión clara diseñada para maximizar tu <span className="text-neon-400">margen neto</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-400">
             Sin costes ocultos por usuario adicional. Elige el nivel de capacidad que tu centro deportivo necesita hoy y escala sin fricciones.
@@ -124,12 +120,12 @@ export default function Pricing({ onOpenDemo }) {
               onClick={() => setBillingCycle('annual')}
               className={`flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-lg transition-all ${
                 billingCycle === 'annual'
-                  ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 shadow-md font-bold'
+                  ? 'bg-neon-500 text-slate-950 font-bold shadow-md shadow-neon-500/20'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
               <span>Facturación Anual</span>
-              <span className="text-[11px] bg-slate-950 text-emerald-300 font-mono px-2 py-0.5 rounded-full border border-emerald-500/40">
+              <span className="text-[11px] bg-slate-950 text-neon-400 font-mono px-2 py-0.5 rounded-full border border-neon-500/30">
                 Ahorra 20%
               </span>
             </button>
@@ -146,13 +142,13 @@ export default function Pricing({ onOpenDemo }) {
                 key={plan.id}
                 className={`relative rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-slate-900/90 border-2 border-cyan-400 shadow-2xl shadow-cyan-950/40 lg:-translate-y-3'
-                    : 'bg-slate-900/40 border border-slate-800 hover:border-slate-700'
+                    ? 'bg-[#0d131f] border-2 border-neon-500 shadow-2xl shadow-neon-500/20 lg:-translate-y-3'
+                    : 'bg-[#080d14] border border-slate-800 hover:border-slate-700'
                 }`}
               >
                 {/* Badge "Más Popular" */}
                 {plan.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md flex items-center gap-1.5">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-neon-500 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5" />
                     {plan.badge}
                   </div>
@@ -192,7 +188,7 @@ export default function Pricing({ onOpenDemo }) {
                     </div>
                     {plan.features.map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <Check className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-neon-400 mt-0.5 flex-shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -216,8 +212,8 @@ export default function Pricing({ onOpenDemo }) {
                     onClick={onOpenDemo}
                     className={`w-full py-3.5 px-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 hover:shadow-lg hover:shadow-cyan-400/25'
-                        : 'bg-dark-950 hover:bg-slate-800 text-white border border-slate-700'
+                        ? 'bg-neon-500 hover:bg-neon-400 text-slate-950 hover:shadow-lg hover:shadow-neon-500/25'
+                        : 'bg-[#05070b] hover:bg-slate-800 text-white border border-slate-700'
                     }`}
                   >
                     <span>{plan.ctaText}</span>
@@ -235,18 +231,18 @@ export default function Pricing({ onOpenDemo }) {
 
         {/* Garantías Corporativas */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-slate-400 text-xs">
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <ShieldCheck className="w-5 h-5 text-emerald-400 mx-auto mb-2" />
+          <div className="p-5 rounded-2xl bg-[#080d14] border border-slate-800">
+            <ShieldCheck className="w-5 h-5 text-neon-400 mx-auto mb-2" />
             <h4 className="font-bold text-white mb-1">Garantía de Satisfacción 30 Días</h4>
             <p>Si FitGo! no reduce tus fugas de acceso en el primer mes, cancelas sin penalizaciones.</p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <Zap className="w-5 h-5 text-cyan-400 mx-auto mb-2" />
+          <div className="p-5 rounded-2xl bg-[#080d14] border border-slate-800">
+            <Zap className="w-5 h-5 text-neon-400 mx-auto mb-2" />
             <h4 className="font-bold text-white mb-1">Migración de Datos Asistida</h4>
             <p>Importamos tu base de socios existente desde Excel, GymSoft o cualquier software legado.</p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <Building className="w-5 h-5 text-purple-400 mx-auto mb-2" />
+          <div className="p-5 rounded-2xl bg-[#080d14] border border-slate-800">
+            <Building className="w-5 h-5 text-neon-400 mx-auto mb-2" />
             <h4 className="font-bold text-white mb-1">Compatibilidad con Hardware</h4>
             <p>Se conecta a tus torniquetes y lectores QR existentes mediante relay IP o USB HID.</p>
           </div>
