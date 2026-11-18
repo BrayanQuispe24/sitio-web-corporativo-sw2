@@ -70,7 +70,9 @@ export default async function handler(req, res) {
   const demoUser = (process.env.DEMO_ACCOUNT_EMAIL || 'demo@fitgo.io').replace(/^["']|["']$/g, '').trim();
   const demoPass = (process.env.DEMO_ACCOUNT_PASSWORD || 'FitGoDemo2026!').replace(/^["']|["']$/g, '').trim();
   const senderName = (process.env.SENDER_NAME || 'FitGo! by RandomSoft').replace(/^["']|["']$/g, '').trim();
-  const salesEmail = (process.env.SALES_NOTIFICATION_EMAIL || '').replace(/^["']|["']$/g, '').trim();
+  
+  // Correo del dueño/administrador que recibirá las alertas de leads (IMAGEN 2)
+  const ownerEmail = (process.env.SALES_NOTIFICATION_EMAIL || cleanUser).replace(/^["']|["']$/g, '').trim();
 
   const gymDisplay = gymName ? gymName.trim() : 'tu gimnasio';
 
@@ -193,27 +195,58 @@ export default async function handler(req, res) {
   </html>
   `;
 
+  // Versión texto plano para evitar que los filtros antispam de Gmail lo desvíen a Spam
+  const clientText = `
+Hola ${name},
+
+Hemos recibido tu solicitud para ${gymDisplay}. A continuación te proporcionamos el enlace y las credenciales de acceso a nuestro entorno interactivo de prueba para que explores todas las funcionalidades de FitGo!:
+
+--- CREDENCIALES DE ACCESO DEMO ---
+URL del Sistema: ${demoUrl}
+Usuario / Email: ${demoUser}
+Contraseña: ${demoPass}
+
+Enlace directo: ${demoUrl}
+
+¿Qué podrás probar en este entorno?
+• Módulo de Visión Artificial: Detección de posturas y repeticiones con IA biomecánica.
+• Control de Acceso QR: Generación y validación de pases para socios.
+• Gestión de Membresías: Facturación, reportes y métricas financieras en tiempo real.
+
+${timeSlot ? `📅 Sesión Guiada 1 a 1: Registramos tu preferencia en ${timeSlot}. Uno de nuestros ingenieros te contactará al ${phone || 'tu número registrado'} para coordinar la videollamada.` : ''}
+
+¿Tienes dudas o necesitas asistencia técnica?
+Soporte: soporte@randomsoft.io • Ventas: ventas@randomsoft.io
+
+© ${new Date().getFullYear()} RandomSoft Labs. Todos los derechos reservados.
+`.trim();
+
   try {
-    // 1. Enviar correo al cliente
-    const info = await transporter.sendMail({
+    // 1. ENVIAR CORREO AL CLIENTE (Credenciales de acceso demo - IMAGEN 1)
+    const infoClient = await transporter.sendMail({
       from: `"${senderName}" <${cleanUser}>`,
-      to: email,
+      to: email.trim(),
+      replyTo: cleanUser,
       subject: `Tus accesos de prueba a FitGo! - ${gymDisplay}`,
+      text: clientText,
       html: clientHtml,
     });
+    console.log(`[Email] Correo con credenciales demo enviado al cliente (${email}):`, infoClient.messageId);
 
-    // 2. Notificación interna opcional al equipo de ventas
-    if (salesEmail && salesEmail.trim() !== '') {
+    // 2. ENVIAR ALERTA AL DUEÑO / ADMINISTRADOR (Nuevo prospecto registrado - IMAGEN 2)
+    if (ownerEmail && ownerEmail.trim() !== '') {
       try {
-        await transporter.sendMail({
+        const infoOwner = await transporter.sendMail({
           from: `"${senderName}" <${cleanUser}>`,
-          to: salesEmail.trim(),
+          to: ownerEmail.trim(),
+          replyTo: email.trim(),
           subject: `🔥 [Nuevo Lead Demo] ${gymDisplay} - ${name}`,
+          text: `Nuevo Prospecto Registrado en la Web:\nNombre: ${name}\nCorreo: ${email}\nGimnasio: ${gymName || 'No especificado'}\nTeléfono: ${phone || 'No especificado'}\nHorario preferido: ${timeSlot || 'No especificado'}\nFecha: ${new Date().toLocaleString('es-ES', { timeZone: 'America/La_Paz' })}`,
           html: `
             <div style="font-family: sans-serif; padding: 20px; background: #0f172a; color: #f8fafc; border-radius: 8px;">
-              <h2 style="color: #38bdf8;">Nuevo Prospecto de Demo Registrado</h2>
+              <h2 style="color: #38bdf8; margin-top: 0;">Nuevo Prospecto de Demo Registrado</h2>
               <p>Un cliente ha solicitado acceso a la demo desde el sitio web:</p>
-              <ul>
+              <ul style="line-height: 1.8;">
                 <li><strong>Nombre:</strong> ${name}</li>
                 <li><strong>Correo:</strong> <a href="mailto:${email}" style="color: #38bdf8;">${email}</a></li>
                 <li><strong>Gimnasio:</strong> ${gymName || 'No especificado'}</li>
@@ -224,8 +257,9 @@ export default async function handler(req, res) {
             </div>
           `
         });
+        console.log(`[Email] Alerta de nuevo lead enviada al dueño (${ownerEmail}):`, infoOwner.messageId);
       } catch (salesErr) {
-        console.warn('Aviso: no se pudo enviar la alerta interna a ventas:', salesErr);
+        console.warn('Aviso: no se pudo enviar la alerta interna al dueño:', salesErr);
       }
     }
 
@@ -234,7 +268,7 @@ export default async function handler(req, res) {
     return res.end(JSON.stringify({
       success: true,
       message: 'Accesos de prueba enviados exitosamente a tu correo electrónico.',
-      messageId: info.messageId
+      messageId: infoClient.messageId
     }));
 
   } catch (error) {
